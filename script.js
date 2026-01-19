@@ -83,10 +83,10 @@ document.addEventListener('keydown', (e) => {
 const mobileHeader = document.querySelector('header');
 
 function toggleMobileMenu(e) {
-    if (window.innerWidth <= 900) {
+    if (window.innerWidth <= 1200) {
         
-        if (e.target.tagName === 'A') {
-            return;
+        if (e.target.closest('a')) {
+            return; 
         }
 
         mobileHeader.classList.toggle('mobile-open');
@@ -122,4 +122,5 @@ scrollTopBtn.addEventListener('click', () => {
         top: 0,
         behavior: "smooth"
     });
+
 });
